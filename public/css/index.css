@@ -1,0 +1,255 @@
+/* body */
+
+body {
+  width: 100vw;
+  background-color: #fdf6f0;
+  font-family: "Lato", sans-serif;
+}
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+/* ---------------row------------------------------------------------------------------- */
+#rowIndex {
+  margin-top: 15px;
+  margin-left: 10px;
+  height: 95%;
+}
+/* image col 1----------------------------------------------------------------------------- */
+#imageIndex {
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  background: url("/..//images/braille.jpg") no-repeat top/cover;
+}
+/* ------intro- col 2--------------------------------------------------------------------- */
+#introIndex {
+  border: 2px solid grey;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#introIndex h1 {
+  font-weight: bold;
+  color: red;
+  text-align: center;
+}
+/* evt_biblio_com - col 3----------------------------------------------------------------- */
+/* Evenements et news */
+
+.biblio {
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+#evt_biblio_comm {
+  border: solid 2px grey;
+  border-radius: 20px;
+}
+
+.evt img {
+  max-width: 20%;
+  border-radius: 20px;
+}
+
+.evt_title {
+  text-align: center;
+  padding: 8px;
+  background-color: #faff00;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.info1_evt {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  align-items: center;
+}
+
+.info1_evt p {
+  padding: 20px;
+}
+
+.evt {
+  border: 1px solid grey;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+/* bibliotheques */
+
+.biblio h4 {
+  text-align: center;
+  padding-top: 5px;
+  padding: 8px;
+  background-color: #ff3f00;
+  border-radius: 15px;
+  font-weight: bold;
+}
+
+.info1_biblio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info1_biblio img {
+  border-radius: 10px;
+  max-width: 100%;
+}
+
+.info1_biblio_left {
+  padding-left: 20px;
+}
+
+.info1_biblio_right {
+  padding: 10px;
+}
+
+/* commerce */
+.info1_com {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info1_com img {
+  max-width: 80%;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.comm {
+  border: 1px solid grey;
+  padding-bottom: 5px;
+  border-radius: 20px;
+}
+
+.comm h4 {
+  text-align: center;
+  padding: 8px;
+  background-color: #0cecdd;
+  border-radius: 15px;
+  font-weight: bold;
+}
+#comm_bold {
+  font-weight: bold;
+}
+
+/*------------------------------ RESPONSIVE ------------------------------------------*/
+/* responsive petits ecrans---------------------------------------------------------- */
+@media screen and (max-width: 900px) {
+  /* BODY */
+
+  body {
+    width: 100vw;
+    margin: auto;
+  }
+
+  #intro {
+    background: url("/..//images/braille.jpg") no-repeat top/cover;
+  }
+
+  #intro h1 {
+    font-size: 20px;
+  }
+
+  #introh {
+    font-size: 20px;
+  }
+
+  #intro p {
+    font-size: 13px;
+  }
+
+  .evt_title {
+    font-size: 14px;
+  }
+
+  .info1_evt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .evt img {
+    max-width: 70%;
+    border-radius: 20px;
+  }
+
+  .info1_biblio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .biblio h4 {
+    font-size: 14px;
+  }
+
+  .info1_biblio_left p {
+    font-size: 12px;
+  }
+
+  .info1_biblio_center a {
+    font-size: 13px;
+  }
+  .info_bold {
+    font-size: 13px;
+  }
+
+  .info1_biblio img {
+    border-radius: 10px;
+    max-width: 100%;
+  }
+
+  .info1_com {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .comm h4 {
+    font-size: 14px;
+  }
+
+  #comm_bold {
+    padding: 10px;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .info1_com p {
+    font-size: 12px;
+  }
+
+  .info1_com img {
+    max-width: 70%;
+    margin: auto;
+    padding-bottom: 10px;
+  }
+}

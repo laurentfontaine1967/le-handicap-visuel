@@ -1,0 +1,124 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/braille.css') }}">
+	{% include "public/shared/_navbar.html.twig" %}
+
+
+	<div id="rowBraille" class="row">
+
+
+		<aside id="ou_intro_braille" class="col-xl-3">
+
+			<div class="intro_braille">
+
+				<div class="sigle">
+					<p>
+						<i class="fas fa-braille"></i>
+					</p>
+				</div>
+
+				<h4>Le Braille</h4>
+				<img src="{{ asset('images/Louis_Braille.jpg') }}" alt="Louis_Braille">
+				<p>
+					Le système porte le nom de son inventeur, le Français Louis Braille (1809-1852) qui avait perdu la vue à la suite d'un accident. Élève à l'Institution royale des jeunes aveugles, il modifie et perfectionne le code Barbier. En 1829 paraît le premier exposé de sa méthode.</p>
+
+
+				<div class="memo">
+					<p>
+						Comment apprendre le braille?
+					</p>
+					<p>Les moyems mémo-techniques</p>
+					<p>Documentation</p>
+				</div>
+
+
+			</div>
+
+
+		</aside>
+
+
+		<aside id="contentBraille" class="col-xl-9">
+			<div class="content_braille">
+
+				<div class="content_info_braille">
+					<h5>C'est quoi le braille ?</h5>
+					<p>
+						En braille standard, un caractère est représenté dans une matrice de
+																																																										 six points sur deux colonnes, chaque caractère étant formé par un à
+																																																										 six points en relief.</p>
+					<p>
+						<span>
+							Ces points sont numérotés de
+																																																																				  haut en bas et de gauche à droite:</span>
+						Par
+																																																										 exemple, la lettre c se représente par les deux points supérieurs,
+																																																										 soit la combinaison 1,4.
+					</p>
+					<p>Les chiffres sont toujours précédés du point braille 6 pour les differencier des lettres</p>
+				</div>
+
+				<div class="lettre_chiffre">
+					<div class="img_lettre_braille">
+						<p>Les lettres</p>
+						<img src="{{ asset('images/lettres braille.png') }}" alt="lettres brailles"/>
+					</div>
+
+					<div class="img_chiffre_braille">
+						<p>Les chiffres</p>
+						<img src="{{ asset('images/chiffres.png') }}" alt="chiffres brailles"/>
+					</div>
+				</div>
+
+				<div class="title_learn">
+					<h5>
+						Apprendre le braille facilement en 5 etapes</h5>
+				</div>
+
+
+				<div class="learn_braille">
+					<div class="first_step">
+						<p>Il y a 6 points dans une cellule braille.Savoir où se situent les points et les espaces.
+						</p>
+						<img src="{{ asset('images/ETAPE1.PNG') }}" alt="etape1">
+					</div>
+
+					<div class="second_step">
+						<p>
+							Les lettres de A a J.
+							<sspan>Ces lettres n'utilisent que les 4 points supérieurs sur les 6 de la cellule.
+							</span>
+						</p>
+						<img src="{{ asset('images/ETAPE2.PNG') }}" alt="etape2">
+					</div>
+
+					<div class="third_step">
+						<p>Les lettres de K a T.<span>
+								Elles sont identiques aux lettres A à J, sauf qu'elles possèdent un point additionnel en position 3.
+							</span>
+						</p>
+						<img src="{{ asset('images/ETAPE3.PNG') }}" alt="etape3">
+					</div>
+
+					<div class="four_step">
+						<p>Les lettres U, V, X, Y et Z.<span>Ce sont les mêmes que les lettres A à E, sauf qu'elles ont un point supplémentaire en positions 1 , 3 et 6.</span>
+						</p>
+						<img src="{{ asset('images/ETAPE4.PNG') }}" alt="etape4">
+					</div>
+
+					<div class="five_step">
+						<p>
+							<span>
+								Le W, ne suit pas ce schéma. Car le braille a été écrit à l'origine pour le Français, qui a l'époque ne contenait pas de W.</span>
+						</p>
+						<img src="{{ asset('images/ETAPE5.PNG') }}" alt="etape5">
+					</div>
+
+				</div>
+			</div>
+		</aside>
+	</div>
+	{% include "public/shared/_footer.html.twig" %}
+{% endblock %}

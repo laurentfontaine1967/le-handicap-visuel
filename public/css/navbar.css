@@ -1,0 +1,53 @@
+#adminis {
+  color: brown;
+}
+#commerce {
+  color: darkblue;
+}
+#news {
+  color: darkorange;
+}
+#tchat {
+  color: mediumvioletred;
+}
+
+#braille {
+  color: seagreen;
+}
+
+#asso {
+  color: teal;
+}
+
+nav {
+  margin-top: 10px;
+  background-color: aliceblue;
+}
+
+nav a {
+  color: black;
+  font-family: "Lato", sans-serif;
+}
+.navbar-toggler-icon {
+  color: black;
+}
+
+#enregistre {
+  color: red;
+}
+
+#myspace {
+  color: blueviolet;
+}
+
+#acceuil {
+  color: green;
+}
+
+/*------------------------------ RESPONSIVE ------------------------------------------*/
+/* responsive petits ecrans---------------------------------------------------------- */
+@media screen and (max-width: 450px) {
+  #navbarquery {
+    width: 100vw;
+  }
+}

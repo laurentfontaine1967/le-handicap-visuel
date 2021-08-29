@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5 style="font-weight: bold">Mes Echanges
+					</h5>
+					<a class="btn btn-sm btn-primary mt-3" href="{{ path('create_article') }}">Creer un Post</a>
+
+
+					<p>Cet espace vous permet de créer des Posts
+
+					</p>
+					<p>
+
+						Vous pouvez également les supprimer et les modifier.
+					</p>
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+
+		<div class="col-12">
+			<div class="table-responsive">
+				<h3 class="showart" style=" font-weight: bold">Mon Espace
+				</h3>
+
+
+				<div class="d-flex align-items-center justify-content-between">
+
+
+					<div class="card-body">
+						{% if articles | length > 0 %}
+							{{ knp_pagination_render(articles) }}
+							<div class="table-responsive">
+
+								<table class="table table-hover">
+
+									<thead class="tete">
+										<th>Date</th>
+										<th>titre de l'article</th>
+										<th>Contenu</th>
+
+										<th>action
+										</th>
+										<th>Supprimer</th>
+
+									</thead>
+								</thea<tbody>
+								{% for article in articles %}
+									<tr>
+										<td>{{ article.createdAt | date('d-m-Y') }}</td>
+										<td>{{ article.titre  }}</td>
+										<td>{{ article.description|raw  }}</td>
+										<td>
+											<a class="btn btn-sm btn-warning mt-3" href="{{ path('auteur_edit', {'id' : article.id }) }}">Modifier</a>
+										</td>
+										<td>
+											<a class="btn btn-sm btn-danger mt-3" href="{{ path('auteur_delete', {'id' : article.id }) }}">Supprimer</a>
+
+
+										</td>
+									</tr>
+								{% endfor %}
+							</tbody>
+						</td>
+					</tbody>
+				</tr>
+			</td>
+		</tbody>
+	</tr>
+</table>
+{{ knp_pagination_render(articles) }}{% else %}
+<p>Tu n'as pas encore écrit d'articles!</p>
+<a class="btn btn-sm btn-success mt-3" href="{{ path('create_article') }}">Creer un Post</a>{% endif %}</div></div></div></div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body> {% endblock %}

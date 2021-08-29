@@ -1,0 +1,233 @@
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+/*------------------------------------- body --------------------------------------------*/
+/* BODY */
+body {
+  background-color: #fdf6f0;
+  font-family: "Lato", sans-serif;
+}
+
+#rowBraille {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.intro_braille {
+  height: 98%;
+  margin-top: 15px;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid grey;
+}
+
+.content_braille {
+  height: 98%;
+  padding: 30px;
+  width: 98%;
+  margin-top: 15px;
+  border: solid 3px grey;
+  border-radius: 20px;
+}
+
+.content_braille h5 {
+  font-size: 30px;
+  color: red;
+  font-weight: bold;
+}
+
+#ou_intro_braille i {
+  font-size: 40px;
+  color: seagreen;
+}
+
+.intro_braille img {
+  max-width: 50%;
+}
+
+.intro_braille h4 {
+  color: red;
+  font-weight: bold;
+}
+
+.memo {
+  padding: auto;
+  width: 95%;
+  border-radius: 20px;
+  font-weight: bold;
+  background-color: saddlebrown;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.lettre_chiffre {
+  display: flex;
+  flex-direction: row;
+  padding-left: 15px;
+}
+
+.lettre_chiffre img {
+  max-width: 80%;
+}
+
+.img_lettre_braille p,
+.img_chiffre_braille p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.title_learn h5 {
+  margin-top: 15px;
+  font-size: 30px;
+  color: red;
+}
+
+.second_step img,
+.third_step img,
+.four_step img {
+  max-width: 95%;
+}
+
+.five_step img {
+  max-width: 30%;
+}
+
+.first_step img {
+  max-width: 55%;
+}
+
+.first_step,
+.second_step,
+.third_step,
+.four_step,
+.five_step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: solid 1px grey;
+  border-radius: 10px;
+  margin: 5px;
+  background-color: tan;
+  opacity: 0.8;
+}
+
+.learn_braille {
+  border-radius: 10px;
+  height: 45%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  font-weight: bold;
+}
+
+/*---------------------------------- Responsive petits ecram ---------------------------------------*/
+@media screen and (max-width: 450px) {
+  /* BODY */
+
+  body {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  #ou_intro {
+    height: auto;
+  }
+  #contentBraille {
+    height: auto;
+  }
+
+  #content_braille {
+    height: auto !important;
+  }
+
+  .intro_braille {
+    width: 97%;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .intro img {
+    max-width: 30%;
+  }
+
+  .intro p {
+    font-size: 13px;
+  }
+
+  .learn_braille {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content_info_braille h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .content_info_braille p {
+    font-size: 12px;
+  }
+
+  .img_lettre_braille p,
+  .img_chiffre_braille p {
+    font-size: 12px;
+  }
+  .title_learn h5 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .lettre_chiffre {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .img_lettre_braille img,
+  .img_chiffre_braille img {
+    max-width: 100%;
+  }
+
+  .first_step p,
+  .second_step p,
+  .third_step p,
+  .four_step p,
+  .five_step p {
+    font-size: 12px;
+  }
+
+  .second_step img,
+  .third_step img,
+  .four_step img {
+    max-width: 50%;
+  }
+
+  .five_step img {
+    max-width: 10%;
+  }
+
+  .first_step img {
+    max-width: 30%;
+  }
+}

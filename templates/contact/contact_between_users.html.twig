@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Envoyer un e-mail
+{% endblock %}
+
+{% block body %}
+
+
+	<link rel="stylesheet" href="{{ asset('/css/contact.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5>Contacter
+					</h5>
+
+
+					<p>Si vous souhaitez êtres contacté en retour, vous devrez communiquer votre adresse mail dans le contenu de votre message</p>
+
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/send_mail.png') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+
+			</div>
+		</div>
+	</body>
+</aside>
+
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+
+		<div class="container">
+			<div class="contacttest">
+				<p style="font-size:20px;font-weight:bold">Vous allez contacter le pseudo:
+					{{ userIdentity.pseudo }}</p>
+			</div>
+			<div class="mb-6" id="kcedit">
+
+				{{ form_start(form) }}
+
+
+				<div class="form-group">
+					{{ form_row(form.message)}}
+				</div>
+
+
+				<button type="submit" id="valider" class="btn btn-success">Envoyer</button>
+
+			</div>
+		</div>
+
+
+	</div>
+</div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}

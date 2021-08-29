@@ -1,0 +1,112 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/administratif.css') }}">
+	{% include "public/shared/_navbar.html.twig" %}
+
+	<div id="rowAdministratif" class="row">
+
+
+		<aside id="ou_intro_adminis" class="col-xl-3">
+
+			<div class="intro_adminis">
+
+				<div class="sigle">
+					<P>
+						<i id="adminis" class="fas fa-wheelchair"></i>
+					</p>
+				</div>
+
+
+				<div class="info_adminis">
+					<h5>Les Administrations</h5>
+					<p>35% des personnes handicapées et leurs aidants jugent les démarches administratives assez, voire très complexes</p>
+					<p>Des difficultés rencontrées pour faire reconnaitre son handicap</p>
+					<p>
+						<span>Force est de constater les difficultés réelles auxquelles sont encore confrontées de nombreuses personnes en situation de handicap pour faire valoir leurs droits, du fait de la complexité des démarches et de la lenteur des circuits administratifs.</span>
+					</p>
+				</div>
+
+				<img src="{{ asset('images/humour.jpg') }} " alt="humour">
+
+				<div class="info_1">
+					<p>Quelques liens et infos pratiques dans cette section</p>
+				</div>
+			</div>
+		</aside>
+
+
+		<aside id="content_adminis" class="col-xl-9">
+			<div class="content_component_adminis">
+				<div class="first_title">
+					<h5>Faire appel a la MDPH</h5>
+					<p>Lorsqu’une personne en situation de handicap se retrouve face à des besoins spécifiques, elle peut faire appel à la Maison Départementale pour les Personnes Handicapées (MDPH). Grâce à son large spectre d’intervention, cet organisme permet de faciliter le quotidien de ses usagers.
+					</p>
+				</div>
+
+
+				<div class="second_title">
+					<h5>Quelles sont les aides délivrées par la MDPH ?</h5>
+					<p>La personne dont l’infirmité a été reconnue peut obtenir un certain nombre d’aides.</p>
+					<p>La MDPH peut:</p>
+					<ul>
+						<li>Apporter une aide matérielle.</li>
+						<li>Proposer un placement en établissement spécialisé.
+						</li>
+						<li>Intervenir en faveur de l’attribution d’une assistante de vie scolaire pour un jeune enfant.</li>
+					</ul>
+					<p>Un certain nombre d’allocations permettent de compenser la perte d’autonomie générée par le handicap.</p>
+					<p>Se rapprocher de la MDPH se votre departement de residence
+					</p>
+					<p>
+						<a class="btn btn-info" href="https://fmh-association.org/services-2/ma-mdph/" target="_blank">Liste des MDPH par departement</a>
+					</p>
+					<p></p>
+				</div>
+
+
+				<div class="third_title">
+					<h5>Quels sont les documents à fournir pour réaliser une demande d’aide auprès de la MDPH ?</h5>
+					<p>Formulaire unique de demande CERFA :
+						<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/MDPHE-formulairededemande.pdf" target="_blank">Formulaire</a>
+						</span>
+					</p>
+					<p>Un certificat médical (Cerfa) datant de moins de 3 mois, rempli, daté et signé par votre médecin (avec son cachet):
+						<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/cerfa_15695-01.pdf" target="_blank">Certificat</a>
+						</span>
+					</p>
+					<p>Compte rendu type pour un bilan auditif à joindre au certificat médical<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/BILAN-AUDITIF.pdf">
+								Document a telecharger</a>
+						</span>
+					</p>
+					<p>Compte rendu type pour un bilan ophtalmologique
+						<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/BILAN-OPHTALMOLOGIQUE.pdf" target="_blank">
+								Document a telecharger
+							</a>
+						</span>
+					</p>
+				</p>
+				<p>Un justificatif d’identité (photocopie) en cours de validité.
+				</p>
+				<p>Un justificatif de domicile (photocopie)</p>
+			</div>
+
+
+			<div class="fourth_title">
+				<h5>Parcours de votre demande</h5>
+				<p>Une fois la demande reçue par la MDPH, un accusé de réception vous est transmis, ainsi qu’une demande de pièces complémentaires si besoin. Ensuite, votre demande est étudiée par les membres de la CDAPH qui personnalise alors un plan compensatoire et vous envoie une notification de décision.</p>
+				<p>La procédure prend en moyenne 6 mois pour une première instruction et 4 mois pour un renouvellement.</p>
+
+			</div>
+
+
+		</div>
+	</aside>
+
+</div>
+{% include "public/shared/_footer.html.twig" %}{% endblock %}

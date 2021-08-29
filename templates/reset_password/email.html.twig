@@ -1,0 +1,14 @@
+<h1>Bonjour</h1>
+
+<p>Vous avez demandé la reinitialisation de votre mot de passe suite à un oubli .</p>
+<p>Pas de panique, il suffit de suivre les instructions contenues dnas ce mail:</p>
+
+
+<p>Pour réinitialiser votre mot de passe cliquez sur ce lien:</p>
+
+<a href="{{ url('app_reset_password', {token: resetToken.token}) }}">{{ url('app_reset_password', {token: resetToken.token}) }}</a>
+
+<p>Votre lien expire dans:
+	{{ resetToken.expirationMessageKey|trans(resetToken.expirationMessageData, 'ResetPasswordBundle') }}.</p>
+
+<p>L'équipe "Le Handicap Visuel</p>

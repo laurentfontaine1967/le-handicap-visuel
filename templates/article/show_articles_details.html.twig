@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5>Les Post
+					</h5>
+
+
+					<p>Les Post sont consultables par tous.
+																																																																																																						Seuls les membres inscrits peuvent contacter les personnes ayant postées.
+					</p>
+					<p>
+
+						Quand vous souhaitez contacter un pseudo, votre adresse mail ne sera pas communiquée.
+					</p>
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+
+		<h3 class="showart">Vos partages ...</h3>
+
+
+		<table class="table table-hover">
+
+
+			<tr class="tete">
+				<th>titre</th>
+				<th>Détail du contenu</th>
+				{% if app.user %}
+					<th>contacter</th>
+				{% endif %}
+				<th>Retour
+				</th>
+			</tr>
+		</tr>
+
+		<tr>
+
+			<td>{{article.titre}}</td>
+			<td>{{article.description |raw}}</td>
+
+			{% if app.user %}
+				<td>
+					<a href="{{ path('contact_between_users', {'id' : article.user.id}) }}" class="btn btn-success">Contacter
+						<i class="fas fa-envelope"></i>
+					</td>
+				{% endif %}
+			</td>
+			<td>
+				<a href="{{ path('show_articles') }}" class="btn btn-warning">
+					<i class="fas fa-chevron-left"></i>
+				</td>
+			</td>
+		</tr>
+
+	</tr>
+</tr></table></div></div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}

@@ -1,0 +1,22 @@
+/* ---------------footer---------------------------------------------------- */
+footer {
+  font-family: "Lato", sans-serif;
+  background-color: beige;
+  height: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+}
+
+footer a {
+  color: black;
+}
+/* fin footer */
+/*------------------------------ RESPONSIVE ------------------------------------------*/
+/* responsive petits ecrans---------------------------------------------------------- */
+@media screen and (max-width: 450px) {
+  footer a {
+    font-size: 10px;
+  }
+}

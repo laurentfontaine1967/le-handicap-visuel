@@ -1,0 +1,84 @@
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+/*------------------------------- body -------------------------------------------------------------------------*/
+
+body {
+  background-color: #fdf6f0;
+  font-family: "Lato", sans-serif;
+}
+
+#regis {
+  padding: 15px;
+  border-radius: 20px;
+  margin: 0 auto;
+  margin-top: 100px;
+  width: 70%;
+  border-style: double;
+  align-items: center;
+}
+
+#valider {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.textealerte {
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  border-radius: 20px solid grey;
+}
+
+.textealerte h5 {
+  font-size: 30px;
+}
+
+.form-group {
+  padding: 8px;
+}
+.textealerte p {
+  font-size: 16 px;
+  font-weight: bold;
+}
+
+#btonval {
+  margin-top: 50px;
+  width: 100%;
+}
+
+/*------------------------------ RESPONSIVE ------------------------------------------*/
+/* responsive petits ecrans---------------------------------------------------------- */
+@media screen and (max-width: 450px) {
+  .textealerte p {
+    font-size: 12px;
+  }
+
+  #regis {
+    margin-top: 50px;
+    width: 70%;
+    height: 80%;
+    border-style: double;
+    align-items: center;
+  }
+
+  .form-group {
+    padding: 1px;
+  }
+
+  #valider {
+    align-items: center;
+    font-size: 12px;
+    margin-top: 50px;
+    width: 100%;
+  }
+}

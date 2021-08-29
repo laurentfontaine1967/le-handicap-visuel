@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5>Mes Posts
+					</h5>
+
+
+					<p>Les Post sont consultables par tous.
+																																																																																																																														Seuls les membres inscrits peuvent contacter les personnes ayant postées.
+					</p>
+					<p>
+
+						Quand vous souhaitez contacter un pseudo, votre adresse mail ne sera pas communiquée.
+					</p>
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<a class="btn btn-success" href="{{ path('auteur_home') }}">
+					<i class="fas fa-arrow-left"></i>Retour</a>
+			</div>
+			<div class="col-12 mt-3">
+				<div class="card">
+					<div class="card-header d-flex align-items-center justify-content-between">
+						<h3>Créer un article</h3>
+					</div>
+					<div class="card-body">
+						{{ form_start(form) }}
+
+						{{ form_widget(form) }}
+
+						<button class="btn btn-primary mt-3" type="submit">
+							Enregistrer
+						</button>
+
+						{{ form_end(form) }}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div></div></div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}

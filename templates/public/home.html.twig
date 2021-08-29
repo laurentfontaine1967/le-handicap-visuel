@@ -1,0 +1,119 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/index.css') }}">
+	{% include "public/shared/_navbar.html.twig" %}
+	<body
+		class="image">
+
+
+		<!-- div class row -->
+		<div class="row" id="rowIndex">
+			<div id="imageIndex" class="col-md-1"></div>
+
+			<div id="introIndex" class="col-md-2">
+				<h1 id="introh">LE HANDICAP VISUEL</h1>
+				<p>
+					Nous sommes souvent démunis face au handicap visuel qui touche nos
+																																																																																																																																																																																																																																																																																																																																																																																													      proches.
+				</p>
+				<h6>Voici quelques point essentiels.</h6>
+				<p>Vers quels organismes s’orienter?</p>
+				<p>Les associations .Solutions? Entraide?</p>
+				<p>les aides possibles?</p>
+				<p>Ou se procurer du matériel adapté?</p>
+				<p>News et actualités!</p>
+				<p>Un espace de partage et d'échange</p>
+				<p>Comprendre le braille….</p>
+			</div>
+
+			<div id="evt_biblio_comm" class="col-md-8">
+
+				<div class="evt">
+
+					<h4 class="evt_title">Evenements & News</h4>
+					<div class="info1_evt">
+						<img class="new_evt" src="{{ asset('images/c516f7f_558673212-librairie.jpg') }} " alt="image"/>
+						<p>
+							Première librairie exclusivement consacrée aux livres destinés
+																																																																																																																																																																																																																																																																																																																																  aux malvoyants, la Librairie des grands caractères ouvrira ses
+																																																																																																																																																																																																																																																																																																																																		   portes, à Paris, rue Laplace, à deux pas du Panthéon, mercredi
+																																																																																																																																																																																																																																																																																																																																				 20 janvier. Selon la Fédération des aveugles et des amblyopes,
+																																																																																																																																																																																																																																																																																																																																		     	 il existe, en France, 207 000 aveugles et 932 000 malvoyants.
+																																																																																																																																																																																																																																																																																																																																		   C’est donc à ces derniers ainsi qu’aux lecteurs confrontés à des
+																																																																																																																																																																																																																																																																																																																																	        troubles d’apprentissage ou à des difficultés cognitives que
+																																																																																																																																																																																																																																																																																																																																	      s’adresse cette nouvelle librairie.</p>
+					</div>
+
+				</div>
+
+
+				<div class="biblio">
+					<h4>bibliotheque du mois</h4>
+					<div class="info1_biblio">
+						<div class="info1_biblio_left">
+							<p>
+								Les bibliothèques sonores 
+																																																								        regroupent des milliers de livres audio classiques, récents et
+																																																								     de quasiment tous les genres littéraires. Certaines bibliothèques sont accessibles gratuitement.Ce mois ci,on vous propose un conte pour enfant</p>
+							<div class="info1_biblio_center">
+								<a class="btn btn-primary" href="https://lesbibliothequessonores.org/les-bibliotheques-sonores">
+
+									<i class="fas fa-external-link-square-alt">
+										Vers la bibliotheque sonore</i>
+								</a>
+
+							</div>
+
+							<p></p>
+
+						</div>
+
+						<div class="info1_biblio_right">
+							<img src="{{ asset('images/Chat botte.jfif') }} " alt="chat botte"/>
+						</div>
+					</div>
+				</div>
+				<div class="comm">
+					<h4>Nouveaux commercants et materiels</h4>
+					<p id="comm_bold">
+						Ce mois ci nous vous presentons: Le téléphone portable Smartvision 2</p>
+					<div class="info1_com">
+						<div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
+							<div class="carousel-inner">
+								<div class="carousel-item active">
+									<img src="{{ asset('images/telephone-portable-smartvision-1.jpg') }}" class="d-block" alt="image 1">
+								</div>
+								<div class="carousel-item">
+									<img src=" {{ asset('images/telephone-portable-smartvision-2.jpg') }} " class="d-block " alt="image 2">
+								</div>
+								<div class="carousel-item">
+									<img src="{{ asset('images/telephone-portable-smartvision-3.jpg') }}" class="d-block " alt="image3">
+								</div>
+							</div>
+							<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Previous</span>
+							</button>
+							<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+								<span class="carousel-control-next-icon" aria-hidden="true"></span>
+								<span class="visually-hidden">Next</span>
+							</button>
+						</div>
+						<p>
+							Le téléphone mobile adapté pour les déficients visuels SmartVision2 de la société Kapsys représente le premier smartphone conçu et fabriqué en France et intégrant un clavier physique, un écran tactile de 4 pouces avec un système de vocalisation composé par un retour sonore de la synthèse vocale lors de la navigation et une reconnaissance vocale pour lancer des applications ou dicter du texte.
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																					        Il intègre de nombreuses fonctionnalités d’accessibilité ainsi que des caractéristiques ergonomiques spécifiques facilitant sa prise en main et l’accès à l’univers du smartphone.</p>
+					</div>
+				</div>
+			</div>
+			<!-- fin div bilblio-EVENT_COM -->
+
+			<!-- fin div class row -->
+		</div>
+
+
+	</body>
+
+	{% include "public/shared/_footer.html.twig" %}
+{% endblock %}

@@ -1,0 +1,148 @@
+<nav id="navbarquery" class="navbar navbar-expand-lg navbar-light">
+	<div class="container-fluid">
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a id="contrast" class="btn btn-dark">Mode contrasté<i class="fab fa-accessible-icon"></i>
+
+					</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0" id="return_view">
+				<li class="nav-item d-flex align-items-center">
+					<a id="contrast" class="btn btn-dark">retour<i class="fab fa-accessible-icon"></i>
+					</a>
+				</li>
+			</ul>
+			{% if app.user %}
+				{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item d-flex align-items-center">
+							<a class="btn btn-warning" aria-current="page" href=" {{ path('admin_home') }} ">
+								<i class="fas fa-user-shield"></i>Admin</a>
+
+						</li>
+					</ul>
+				{% endif %}
+			{% endif %}
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<i id="acceuil" class="fas fa-home"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('index') }}">Home</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<i id="adminis" class="fas fa-wheelchair"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('ladministratif') }}">Vers les administrations</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<id="commerce" class="fas fa-eye-slash"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('commercant') }}">commerçants</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<i id="news" class="fas fa-rss-square"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('news') }}">New-actualites</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<i id="tchat" class="fab fa-rocketchat"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('show_articles') }}">Echanges</a>
+				</li>
+			</ul>
+
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<i id="braille" class="fas fa-braille"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('braille') }}">Le braille</a>
+				</li>
+			</ul>
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item d-flex align-items-center">
+					<a>
+						<i id="asso" class="fas fa-address-book"></i>
+					</a>
+					<a class="nav-link active" aria-current="page" href="{{ path('association') }}">Associations</a>
+				</li>
+			</ul>
+			{% if app.user %}
+
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item d-flex align-items-center">
+
+						<a class=" btn btn-warning nav-link active" aria-current="page" href="{{ path('app_logout') }}">
+							<i id="enregistre" class="fas fa-registered"></i>Se deconnecter</a>
+					</li>
+				</ul>
+				{% if app.user.roles[0] is same as "ROLE_USER" %}
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item d-flex align-items-center">
+
+							<a class=" btn btn-info nav-link active" aria-current="page" href="{{ path('auteur_home') }}">
+								<i id="myspace" class="fas fa-caravan"></i>Mon Espace</a>
+						</li>
+					</ul>
+				{% endif %}
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item d-flex align-items-center">
+
+						<a>
+							<i class="fas fa-user-check"></i>
+							{{ app.user.username }}
+						</a>
+
+
+					</li>
+
+
+				</ul>
+			{% else %}
+
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item d-flex align-items-center">
+						<a>
+							<i id="enregistre" class="fas fa-link"></i>
+						</a>
+						<a class="nav-link active" aria-current="page" href="{{ path('app_login') }}">Se connecter</a>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item d-flex align-items-center">
+						<a>
+							<i id="enregistre" class="fas fa-registered"></i>
+						</a>
+						<a class="nav-link active" aria-current="page" href="{{ path('register') }}">S'inscrire</a>
+					</li>
+				</ul>
+			{% endif %}
+		</div>
+	</div>
+</nav>

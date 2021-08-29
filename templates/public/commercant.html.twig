@@ -1,0 +1,207 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/commercant.css') }}">
+	{% include "public/shared/_navbar.html.twig" %}
+
+
+	<div id="rowCommercant" class="row">
+
+		<aside id="ou_intro_commerce" class="col-xl-3">
+
+			<div class="intro_commerce">
+
+				<div class="sigle">
+					<P id="icoco">
+						<i class="fas fa-eye-slash"></i>
+					</p>
+
+				</div>
+				<div class="infoCommerce">
+					<h5>Les commercants</h5>
+					<p>
+						<span>Pour du matériel adapté, nous avons recencé quelques boutiques.
+						</span>
+					</p>
+					<p>
+						<span>Pour certaines ,la livraison est possible à domicile ou achat en boutique.</span>
+					</p>
+					<P>
+						Vous y trouverez :</P>
+					<ul>
+						<li>Du matériel adapté pour les malvoyants.</li>
+						<li>Du matériel adapté pour les non-voyants.</li>
+					</ul>
+				</div>
+
+				<img src="{{ asset('images/humur_page _commercant.jpg') }}" alt="image-humour-commercant">
+
+
+				<div class="join">
+					<p>Commercants rejoignez-nous! Faites-vous connaitre!</p>
+					<p>
+						<span>
+							<a class="btn btn-success " href="mailto:laurentfontaine@gmail.com">
+								<i id="join_icon" class="fas fa-at"></i>Contactez-nous par mail</a>
+
+
+						</span>
+					</p>
+				</div>
+			</div>
+		</aside>
+
+
+		<aside id="content" class="col-xl-9">
+			<div class="content_commerce">
+
+
+				<div class="comm_1">
+					<div class="text_1">
+						<h6>
+							Boutique Valentin Hauy ( A.V.H )</h6>
+						<p>
+							La boutique propose un catalogue de plus de 500 articles adaptés aux malvoyants, aux non voyants et aux braillistes.
+						</p>
+						<p>
+							<span class="italiq">
+								Livraison possible à domicile ou achat en boutique posible.</span>
+						</p>
+						<ul>
+							<li>Articles pour la vie quotidienne : cuisine, para-médical,accessoires audio,bricolage.</li>
+							<li>Téléphonie portable et fixe et accessoires.
+							</li>
+							<li>Lecteurs enregistreur et de salon.</li>
+							<li>Loupes:à mains , éclairantes ou électroniques.</li>
+							<li>Téléagrandisseurs: de bureau, parlant ou portable></li>
+							<li>Machine à écrire et lampes basse vision.</li>
+							<li>Horlogerie: montre braille, reveil parlant...</li>
+							<li>Locomotion: cannes
+							</li>
+							<li>Ouvrages d'apprentissage.</li>
+						</ul>
+					</div>
+					<div class="link_1">
+						<img src="{{ asset('images/boutique_valentin_hoy.png') }}" alt="logo association">
+						<p>
+
+
+							<a class="btn btn-secondary" href="https://magasin.avh.asso.fr/" target="_blank">
+								<i class="fas fa-arrow-circle-right"></i>Vers la boutique</a>
+
+						</p>
+					</div>
+				</div>
+
+
+				<div class="comm_2">
+					<div class="text_2">
+						<h6>CFLOU.COM</h6>
+						<p>Une offre similaire à celle de Valentin Hauy...mais en plus:</p>
+						<ul>
+							<li>Des promotions régulières et des nouveautés.
+							</li>
+
+							<li>Un service de location de matériel pour  malvoyants et aveugles. Ce qui peut être intérressant compte-tenu du côut à l'achat du matériel.</li>
+							<li>Démonstration et installation à domicile du matériel.</li>
+							<li>Propose également des formations informatique et téléphonie.</li>
+						</ul>
+					</div>
+
+					<div class="link_2">
+						<img src="{{ asset('images/logo_cflou.png') }}" alt="logo commercant">
+						<p>
+
+
+							<a class="btn btn-secondary" href="https://www.cflou.com/#" target="_blank">
+								<i class="fas fa-arrow-circle-right"></i>Vers la boutique
+							</a>
+
+						</p>
+					</div>
+				</div>
+
+				<div class="comm_3">
+					<div class="text_3">
+						<h6>Ceciaa -Produits et services pour aveugles et malvoyants
+						</h6>
+						<p id="italic">Offre identique aux deux boutiques précédentes.</p>
+						<p>Ceciaa propose entre-autres des services gratuits ou payants:</p>
+						<ul>
+							<li>Téléassistance.</li>
+							<li>Prêt de matériels.</li>
+							<li>Contrat de maintenance.</li>
+
+						</ul>
+					</div>
+
+					<div class="link_3">
+						<img src="{{ asset('images/logo_cecciaa.png') }}" alt="logo commercant">
+						<p>
+
+
+							<a class="btn btn-secondary" href="" target="_blank">
+								<i class="fas fa-arrow-circle-right"></i>Vers la boutique
+							</a>
+
+						</p>
+					</div>
+				</div>
+				<div class="others">
+
+					<h6>Il en existe également d'autres ...
+					</h6>
+
+					<div class="others_1">
+						<ul>
+							<li class="comm_name">Deaco</li>
+							<li>Vente en ligne de matériel pour déficients visuels et/ou auditifs
+								<span>
+									<a class="btn btn-secondary btn-sm" href="http://boutique.deaco.fr/index.cfm" target="_blank">
+										<i class="fas fa-eye"></i>
+										Y aller</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="others_2">
+						<ul>
+							<li class="comm_name">Etex
+							</li>
+							<li>Matériel pour déficients visuels (basse, vision, informatique, impression, éclairage, accessoires) :
+
+								<span>
+									<a class="btn btn-secondary btn-sm" href="http://www.etexfrance.fr/" target="_blank">
+										<i class="fas fa-eye"></i>
+										Y aller
+									</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+
+					<div class="others_4">
+						<ul>
+							<li class="comm_name">
+								Visiole
+							</li>
+
+							<li>Matériel pour déficients visuels (basse, vision, informatique, impression, éclairage, accessoires) :
+																																																																																																																																																																																																																																																																																																																																																																																																																																														                                .<span>
+									<a class="btn btn-secondary btn-sm" href="http://www.visiole.fr/" target="_blank">
+										<i class="fas fa-eye"></i>Y aller</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</aside>
+
+</div>
+
+{% include "public/shared/_footer.html.twig" %}{% endblock %}

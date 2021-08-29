@@ -1,0 +1,82 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'enregistrer
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/register.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icoco">
+							<i class="fas fa-users-cog"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5 style="font-weight: bold">S'enregistrer sur le site
+					</h5>
+
+
+					<p>
+
+						Créér un compte vous ouvre un espace personnel:
+																																																																																																																																																					
+																																																																																																																																						                 	vous permettant de poster des demandes d'aides et de conseilet déchanger avec les personnes inscrites.
+																																																																																																																																																					
+																																																																																																																																						                	Vous pourrez également partager vos expèriences... cela va beaucoup aider ceux d'entre-vous qui rencontrent les mêmes difficultés.
+
+
+					</p>
+
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/register.png') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+		{% include "public/shared/_messages_flash.html.twig" %}
+
+		<div class="mb-6" id="regis">
+
+			{{ form_start(registrationForm) }}
+
+			<div class="form-group">
+				{{ form_row(registrationForm.pseudo) }}
+			</div>
+			<div class="form-group">
+				{{ form_row(registrationForm.email) }}
+			</div>
+			<div class="form-group">
+				{{ form_row(registrationForm.plainPassword)}}
+			</div>
+
+			<a id="valider">
+				<button type="submit" id="valider" class="btn btn-primary">S'enregister</button>
+			</a>
+
+		</div>
+
+	</div>
+
+</aside></div>{% include "public/shared/_footer.html.twig" %}</body>{{ form_end(registrationForm) }}{% endblock %}

@@ -1,0 +1,195 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/association.css') }}">
+	{% include "public/shared/_navbar.html.twig" %}
+
+
+	<div id="rowAssos" class="row">
+
+
+		<aside id="ou_intro_assos" class="col-xl-3">
+
+			<div class="intro_assos">
+				<div class="sigle">
+					<P>
+						<i id="icon" class="fas fa-address-book"></i>
+					</p>
+				</div>
+
+				<div class="info_assos">
+					<h5>Les Associations</h5>
+					<p>
+						<span>Il existe de nombreuses associations que vous pouvez contacter.</span>
+					</p>
+					<p>
+						<span>Nous ne pouvons pas toutes les recenser ici.Voiciles plus importantes.</span>
+					</p>
+					<P>
+						En les contactant, vous pourrez etre mis en relation :</P>
+					<ul>
+						<li>Avec des associations les plus  proches de votre domicile.</li>
+						<li>Etre oriente vers les associations specifiques si besoin.</li>
+					</ul>
+				</div>
+
+				<img src="{{ asset('images/handicap_assos.jpg') }}" alt="image-handicap-asso">
+
+
+				<div class="join">
+					<p>Association rejoignez-nous! Faites-vous connaitre!</p>
+					<p>
+						<span>
+							<a class="btn btn-success " href="mailto:laurentfontaine@gmail.com">
+								<i id="join_icon" class="fas fa-at"></i>Contactez-nous par mail</a>
+
+						</span>
+					</p>
+				</div>
+			</div>
+		</aside>
+
+
+		<aside id="content_assos" class="col-xl-9">
+			<div class="content_component_assos">
+
+
+				<div class="asso_1">
+					<div class="text_1">
+						<h6>
+							Association Valentin Hauy ( A.V.H )</h6>
+						<ul>
+							<li>Elle accueille les personnes en situation de handicap visuel et celles menacées par la malvoyance ou la cécité.</li>
+							<li>Elle defend le droit des personnes en situation de handicap visuel</li>
+							<li>Elle prpose une bibliotheque braille,des livres parles,et egalement des fils audio-decrits.</li>
+							<li>Propose egalement des activites culturelles.</li>
+						</ul>
+					</div>
+					<div class="link_1">
+						<img src="{{ asset('images/Logo_Valentin_Haüy_assoss.png') }}" alt="logo association">
+						<p>
+
+							<span>
+								<a class="btn btn-secondary" href="https://www.avh.asso.fr/" target="_blank">
+									<i class="fas fa-arrow-circle-right"></i>Vers  l'A.V.H</a>
+							</span>
+						</p>
+					</div>
+				</div>
+
+
+				<div class="asso_2">
+					<div class="text_2">
+						<h6>Union Nationale des Aveugles et Deficients visuels ( U.N.A.D.E.V )</h6>
+						<p>Ses missions:
+						</p>
+						<ul>
+							<li>Accompagnement social et aides à domicile
+							</li>
+							<li>Activités de loisirs et sportives diverses.</li>
+							<li>Bibliothèque sonore.</li>
+
+						</ul>
+					</div>
+
+					<div class="link_2">
+						<img src="{{ asset('images/unadev_logo.jfif') }}" alt="logo association">
+						<p>
+
+							<span>
+								<a class="btn btn-secondary" href="https://www.unadev.com/" target="_blank">
+									<i class="fas fa-arrow-circle-right"></i>Vers l'U.N.A.D.E.V</a>
+							</span>
+						</p>
+					</div>
+				</div>
+
+				<div class="asso_3">
+					<div class="text_3">
+						<h6>Fédération des Aveugles
+																																																																																																																																																																																																																		                        et Amblyopes de France</h6>
+						<p id="italic">Elle intevient dans plusieurs domaines:</p>
+
+						<ul>
+							<li>Éducation / Petite enfance.</li>
+							<li>Emploi / Formation.
+							</li>
+							<li>Personnes âgées et dépendance.</li>
+							<li>Accessibilité.</li>
+							<li>Santé Culture / Sport / Loisirs.</li>
+							<li>Nouvelles technologies.</li>
+							<li>Recherche médicale.</li>
+						</ul>
+					</div>
+
+					<div class="link_3">
+						<img src="{{ asset('images/logoFédérationdes-aveuglesdefrance_miseenavant.jpg') }}" alt="logo association">
+						<p>
+
+							<span>
+								<a class="btn btn-secondary" href="https://aveuglesdefrance.org" target="_blank">
+									<i class="fas fa-arrow-circle-right"></i>Vers  F.A.A.F</a>
+							</span>
+						</p>
+					</div>
+				</div>
+				<div class="others">
+
+					<h6>Il en existe egalement d'autres ...
+					</h6>
+
+					<div class="others_1">
+						<ul>
+							<li class="asso_name">L'association Handicapzéro</li>
+							<li>Elle propose un guide de contact et d'adresses utiles
+								<span>
+									<a class="btn btn-secondary btn_sm" class="btn btn_success btn-sm" href="http://guide-malvoyance.inpes.fr/-Quelques-contacts-utiles-" target="_blank">
+										guide</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="others_2">
+						<ul>
+							<li class="asso_name">
+								Accès Culture</li>
+							<li>L’association Accès Culture propose des
+																																																																																																																																																									                            aides techniques gratuites  aux personnes aveugles,
+																																																																																																																																																															    malvoyantes, sourdes, malentendantes ou déficientes mentales.
+
+								<span>
+									<a class="btn btn-secondary btn_sm" href="https://accesculture.org/" target="_blank">
+										En savoir +
+									</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+					<div class="others_3">
+						<ul>
+							<li class="asso_name">
+								AIR-Association pour l’Informatique comme Ressource des déficients
+																																																																																																																																																																																																																																																                          visuels AIR
+							</li>
+
+							<li>
+								Elle est spécialisée dans l’utilisation de l’informatique par les
+																																																																																																																																																																																																																																																                              personnes aveugles ou malvoyantes.<span>
+									<a class="btn btn-secondary btn_sm" href="http://www.air-asso.org/" target="_blank">En savoir +</a>
+								</span>
+							</li>
+						</ul>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</aside>
+</div>
+
+
+{% include "public/shared/_footer.html.twig" %}{% endblock %}

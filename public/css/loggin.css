@@ -1,0 +1,146 @@
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+/* BODY */
+/* squelette col-row  */
+
+body {
+  width: 100vw;
+  background-color: #fdf6f0;
+  font-family: "Lato", sans-serif;
+}
+
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+#rowRegister {
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.intro_register {
+  margin-bottom: 15px;
+  height: 95%;
+  margin-top: 15px;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px;
+  align-items: center;
+  text-align: center;
+  border-radius: 20px;
+  border: 3px solid grey;
+}
+
+.content_register {
+  height: 95%;
+  padding: 30px;
+  width: 99%;
+  margin-top: 15px;
+  border: solid 3px grey;
+  border-radius: 20px;
+}
+
+.creat_account {
+  max-width: 60%;
+  padding-bottom: 20px;
+}
+
+#icoco {
+  margin-top: 40px;
+  font-size: 80px;
+  color: green;
+}
+
+#regis {
+  margin: 0 auto;
+  margin-top: 100px;
+  align-items: center;
+}
+
+#regis h5 {
+  text-align: center;
+  font-size: 30px;
+}
+#valider {
+  margin-top: 50px;
+  width: 100%;
+}
+
+.textealerte {
+  text-align: center;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  border-radius: 20px solid grey;
+}
+
+.textealerte h5 {
+  font-size: 30px;
+}
+
+.form-group {
+  padding: 8px;
+}
+.textealerte p {
+  font-size: 16 px;
+  font-weight: bold;
+}
+
+#btonval {
+  margin-top: 50px;
+  width: 100%;
+}
+
+#mdpoubli {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.mdptext {
+  margin-top: 10px;
+  text-align: center;
+}
+.check h5 {
+  padding: 10px;
+}
+/*--------------- specifique *-------------------------------------------------/
+    /* col 1 */
+
+.infoRegister {
+  margin-bottom: 20px;
+}
+
+.infoRegister h5 {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* ---------------------responsive-------------------------------- */
+@media screen and (max-width: 450px) {
+  body {
+    width: 100vw;
+    margin: auto;
+  }
+}

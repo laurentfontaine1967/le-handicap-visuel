@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mot de passe oublié
+{% endblock %}
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/loggin.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icoco">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5 style="font-weight:bold">Mot de passe oublié
+					</h5>
+
+
+					<p>
+
+						Pas de panique!!!
+					</p>
+					<p>
+						Demander la réinitialisation de votre mot de passe</p>
+
+
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/register.png') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+		<form method="post">
+
+
+			<div class="mb-6" id="regis">
+				<h5 style="font-weight:bold">Reinitialiser son mot de passe</h5>
+				<h6 class="mdptext">
+					Entrer votre adresse mail. Un lien vous sera transmis par mail pour le reinitialiser
+				</h6>
+				{{ form_start(requestForm) }}
+				{{ form_row(requestForm.email) }}
+				<div></div>
+
+				<button id="btonval" class="btn btn-primary">Recevoir le lien</button>
+				{{ form_end(requestForm) }}
+
+
+			</div>
+
+
+		</div>
+
+	</aside>
+</div>
+{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}

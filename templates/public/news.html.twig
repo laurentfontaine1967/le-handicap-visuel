@@ -1,0 +1,109 @@
+{% extends "base.html.twig" %}
+
+
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/news.css') }}">
+	{% include "public/shared/_navbar.html.twig" %}
+
+
+	<div id="rowNews" class="row">
+
+		<aside id="ou_intro_news" class="col-xl-3">
+
+			<div class="intro_news">
+
+				<div class="sigle">
+					<P id="icoco">
+						<i class="fas fa-rss-square"></i>
+					</p>
+
+				</div>
+				<div class="infoNews">
+					<h5>Les News et actualités
+					</h5>
+
+
+					<p>
+
+						Toutes les actualités, et New dans cette section .
+																																																																																																																																																																																																																																																																																																																																									Des projets de lois, aux dernières évolutions technologiques.
+					</p>
+
+				</div>
+
+				<img src="{{ asset('images/news_actua_info.jpg') }}" alt="image-humour-commercant">
+
+
+				<div class="join">
+					<p>Envoyez nous vos infos également!</p>
+					<p>
+						<span>
+							<a class="btn btn-success" href="mailto:laurentfontaine@gmail.com">
+								<i id="join_icon" class="fas fa-at"></i>Contactez-nous par mail
+
+							</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</aside>
+
+
+		<aside id="content" class="col-xl-9">
+			<div class="content_news">
+				<h6>Lancement de l’étude Homère, étude de référence sur le handicap visuel</h6>
+				<div class="news_1">
+
+					<div class="news_1_info">
+
+
+						<p>
+							Il n,existe pas à ce jour de données à grande échelle sur la situation des personnes déficientes visuelles en France.
+																																																																																																																																																																																																																																																																																																																																					Un collectif de 8 associations , dont l'association Valentin Haüy,a décidé de porter ensemble la réalisation d’une étude de grande ampleur portant sur les conditions de vie des personnes déficientes visuelles, sur leurs problématiques au quotidien, leurs attentes et leurs besoins dans tous les domaines de leur vie courante, que ce soit sur le diagnostic de leur problème visuel, les moyens de compensation mis à leur disposition, leur éducation, leur accès à l’emploi, à la culture, aux loisirs et sur le vieillissement.
+																																																																																																																																																																																																																																																																																																																													
+																																																																																																																																																																																																																																																																																																																													N’hésitez pas à en parler autour de vous pour recueillir le plus d’informations possibles.
+																																																																																																																																																																																																																																																																																																																								Les résultats seront communiqués en 2022
+						</p>
+					</div>
+
+					<div class="video">
+						<iframe width="640" height="360" src="https://www.youtube.com/embed/WSu2-0GDtRc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+					</div>
+
+					<div class="video-responsive">
+
+						<a href="https://youtu.be/WSu2-0GDtRc" target="_blank" class="btn btn-success">Lien vers la vidéo</a>
+
+
+					</div>
+
+
+				</div>
+				<div class="news_2">
+					<h6>Dernières innovations handicap : le salon E-Tonomy 2020</h6>
+					<div class="news_2_info">
+
+
+						<p>
+							30 000 brevets déposés depuis 1998 ! Plus d'un milliard de personnes ont besoin de technologies d'assistance, selon un rapport sur les tendances technologiques de l'Organisation mondiale de la propriété intellectuelle (Ompi), une agence de l'ONU, rendu public le 23 mars 2021.Pourtant, seule une personne sur dix dans le monde a accès à ces produits d'assistance."Les personnes avec un handicap s'appuient depuis longtemps sur les nouvelles technologies pour gagner en indépendance et mieux interagir avec leur environnement", a souligné le directeur général de l'Ompi, le Singapourien Daren Tang, dans l'avant-propos du rapport. "Depuis l'invention des béquilles dans l'Egypte ancienne jusqu'aux tablettes braille de nos jours, en passant par les prothèses au Moyen Âge, nous sommes à l'orée d'un avenir où les fauteuils roulants autonomes, les prothèses auditives contrôlées par l'esprit et les dispositifs de surveillance des conditions de santé et des émotions atténueront l'impact des déficiences humaines", a-t-il estimé.
+						</p>
+					</div>
+
+					<div class="news_2_link">
+						<a href=" https://informations.handicap.fr/a-handicap-boom-mondial-innovation-high-tech-30549.php" target="_blank" class="btn btn-primary">lien vers l'article complet
+						</a>
+
+					</div>
+
+
+				</div>
+
+
+			</aside>
+
+		</div>
+
+		{% include "public/shared/_footer.html.twig" %}
+	{% endblock %}

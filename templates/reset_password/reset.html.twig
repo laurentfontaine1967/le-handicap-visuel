@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{# {% block title %}Reset your password
+{% endblock %}
+
+{% block body %}
+	<h1>Reset your password</h1>
+
+	{{ form_start(resetForm) }}
+	{{ form_row(resetForm.plainPassword) }}
+	<button class="btn btn-primary">Reset password</button>
+	{{ form_end(resetForm) }}
+{% endblock %} #}
+
+
+{% block title %}Changement de mot de passe
+{% endblock %}
+{% block body %}
+	<link rel="stylesheet" href="{{ asset('/css/loggin.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icoco">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5 style="font-weight:bold">Pour réinitialiser votre mot de passe!!!
+					</h5>
+
+
+					<p>
+
+						On y est !!!!
+					</p>
+					<p>
+						Vous pouvez maintenant changer votre mot de passe</p>
+
+
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/register.png') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+		<form method="post">
+
+
+			<div class="mb-6" id="regis">
+				<h5 style="font-weight:bold">Changer votre mot de passe</h5>
+
+				{{ form_start(resetForm) }}
+				{{ form_row(resetForm.plainPassword) }}
+				<button id="btonval" class="btn btn-primary">Reset password</button>
+				{{ form_end(resetForm) }}
+			</div>
+
+		</aside>
+	</div>
+	{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}

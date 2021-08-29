@@ -1,0 +1,105 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-shield" style="color:red"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5>Menu Administrateur
+					</h5>
+
+					<a class="btn btn-primary" href="{{ path('admin_show_user') }}">Gestion des utilisateurs</a>
+					<p>
+						-des Utilisateurs inscrits
+
+					</p>
+					<a class="btn btn-success" href="{{ path('admin_show_article') }}">Gestion des Posts</a>
+					<p>
+
+						-des Posts
+					</p>
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/cadenas.png') }}" alt="s'enregistrer"></img>
+		</div>
+	</body>
+</aside>
+
+
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+
+		<div class="col-12">
+			<h3 class="showart" style=" font-weight:bold">Liste des Utilisateurs</h3>
+			<div class="card-body">
+				{% if users | length > 0 %}
+					{{ knp_pagination_render(users) }}
+					<div class="table-responsive-sm">
+
+						<table class="table table-hover">
+
+							<thead class="tete">
+								<th>Son id</th>
+								<th>Son Pseudo</th>
+								<th>Son adresse mail</th>
+
+								<th>Supprimer (utilisateur)
+								</th>
+
+							</thead>
+							<tbody>
+								{% for user in users %}
+									<tr>
+										<td>{{ user.id }}</td>
+										<td>{{ user.pseudo }}</td>
+										<td>{{ user.email }}</td>
+
+
+										<td>
+											<a href="{{ path('admin_delete_user', {'id' : user.id}) }}" class="btn btn-danger">
+												<i class="far fa-trash-alt"></i>
+											</td>
+										</td>
+									</tr>
+								</td>
+							{% endfor %}
+						</tbody>
+
+
+					</table>
+					{{ knp_pagination_render(users) }}
+				</div>
+
+
+			{% else %}
+				<p>Aucun User inscrit!</p>
+			{% endif %}
+
+
+		</div>
+	</div>
+</div></aside></div></body>{% endblock %}

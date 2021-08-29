@@ -1,0 +1,157 @@
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+/* BODY */
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  background-color: #fdf6f0;
+  font-family: "Lato", sans-serif;
+}
+
+#rowNews {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.intro_news {
+  height: 95%;
+  margin-top: 15px;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid grey;
+}
+
+.content_news {
+  height: 95%;
+  padding: 30px;
+  width: 98%;
+  margin-top: 15px;
+  border: solid 3px grey;
+  border-radius: 20px;
+}
+
+#icoco {
+  margin-top: 30px;
+  font-size: 80px;
+  color: darkorange;
+}
+/*--------------- specifique *-------------------------------------------------/
+/* col 1 */
+.intro_news img {
+  max-width: 70%;
+}
+
+.join {
+  align-items: center;
+  text-align: center;
+}
+
+.join p {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.infoNews h5 {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* col 2 */
+
+.video-responsive {
+  display: none;
+}
+
+.news_1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.news_1_info {
+  padding: 10px;
+  text-align: left;
+}
+
+.content_news h6 {
+  color: darkred;
+  font-size: 20px;
+  font-weight: bold;
+}
+/* ---------------------responsive-------------------------------- */
+@media screen and (max-width: 1024px) {
+  iframe {
+    display: none;
+  }
+}
+/* ---------------------responsive-------------------------------- */
+@media screen and (max-width: 450px) {
+  body {
+    width: 100vw;
+    margin: auto;
+  }
+
+  .intro_news {
+    height: 90%;
+    margin-top: 15px;
+    width: 99%;
+  }
+
+  #icoco {
+    margin-top: 20px;
+    font-size: 60px;
+    color: darkorange;
+  }
+
+  .intro_news img {
+    max-width: 50%;
+  }
+
+  .news_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  }
+
+  .content_news h6 {
+    font-size: 16px;
+  }
+
+  .content_news {
+    height: 98%;
+    padding: 30px;
+    width: 98%;
+    margin-top: 15px;
+    border: solid 3px grey;
+    border-radius: 20px;
+  }
+  .video-responsive {
+    display: block;
+  }
+}

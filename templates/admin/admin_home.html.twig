@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-shield" style="color:red"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5>Menu Administrateur
+					</h5>
+
+					<a class="btn btn-primary" href="{{ path('admin_show_user') }}">Gestion des utilisateurs</a>
+					<p>
+						-des Utilisateurs inscrits
+
+					</p>
+					<a class="btn btn-success" href="{{ path('admin_show_article') }}">Gestion des Posts</a>
+					<p>
+
+						-des Posts
+					</p>
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/cadenas.png') }}" alt="s'enregistrer"></img>
+		</div>
+	</body>
+</aside>
+
+
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+
+		<div class=" post_subscribe">
+
+			<div
+				class="last_post">
+				{# ( der) #}
+				<table class="table table-hover">
+					<h5 style="font-weight: bold" id="tabletitle">Les 5 derniers Post sur le site</h5>
+
+					<thead class="tete">
+
+						<th>Pseudo</th>
+						<th>titre</th>
+						<th>description</th>
+
+
+					</thead>
+					<tbody>
+
+						<tr>
+
+							{% for article in articles %}
+								<td>
+									{{ article.user.pseudo}}
+
+								</td>
+								<td>
+									{{article.titre}}
+								</td>
+								<td>
+									{{article.description|raw}}
+								</td>
+
+							</tr>
+						{% endfor %}
+					</tbody>
+
+
+					{# ( der) #}
+
+					<table class="table table-hover">
+						<h5 style="font-weight: bold" id="tabletitle">Les 5 derniers inscrits sur le site</h5>
+
+						<thead class="tete">
+
+							<th>pseudo</th>
+							<th>adresse mail</th>
+
+
+						</thead>
+						<tbody>
+
+							<tr>
+
+								{% for user in users %}
+									<td>
+										{{user.pseudo}}
+
+									</td>
+									<td>
+										{{user.email}}
+									</td>
+
+								</tr>
+							{% endfor %}
+						</tbody>
+
+
+					</div>
+
+
+				</div>
+
+
+			</aside>
+
+		</div>
+	</body>
+
+{% endblock %}

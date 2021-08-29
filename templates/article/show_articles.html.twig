@@ -1,0 +1,109 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5 style="font-weight:bold">Les Echanges
+					</h5>
+
+
+					<p>Les Post sont consultables par tous.
+																																																																																																																																																						Seuls les membres inscrits peuvent contacter les personnes ayant postées.
+					</p>
+					<p>
+
+						Quand vous souhaitez contacter un pseudo, votre adresse mail ne sera pas communiquée.
+					</p>
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+		<div class="table-responsive-sm">
+			<h3 class="showart" style="font-weight:bold">Vos partages ...</h3>
+
+			{% if articles | length > 0 %}
+				{{ knp_pagination_render(articles) }}
+				<table class="table table-hover">
+
+					<div class="table">
+						<tr class="tete">
+							<th>Date
+							</th>
+							<th>titre
+							</th>
+							<th>Pseudo</th>
+							<th>Voir le détail</th>
+
+							{% if app.user %}
+								<th>contacter</th>
+							{% endif %}
+						</tr>
+					</tr>
+
+					<tr>
+						{% for article in articles %}
+							<td>{{ article.createdAt | date('d-m-Y') }}</td>
+							<td>{{ article.titre  }}</td>
+
+
+							<td>{{ article.user.pseudo }}</td>
+							<td>
+								<a href="{{ path('show_articles_detail', {'id' : article.user.id}) }}" class="btn btn-warning">
+									<i class="fas fa-eye"></i>
+								</td>
+								{% if app.user %}
+									<td>
+										<a href="{{ path('contact_between_users', {'id' : article.user.id}) }}" class="btn btn-success">
+											<i class="fas fa-envelope"></i>
+										</td>
+									</td>
+								{% endif %}
+
+							</td>
+						</tr>
+					{% endfor %}
+				</tr>
+			</tr>
+		</div>
+	</table>
+	{{ knp_pagination_render(articles) }}
+{% else %}
+	<p>Aucun article n'a encore été écrit!</p>
+{% endif %}</div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}

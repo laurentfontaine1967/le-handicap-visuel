@@ -1,0 +1,39 @@
+{% apply inline_css %}
+<style>
+	{
+		# here, define your CSS styles as usual #
+	}
+
+	.divText {
+		text-align: center;
+	}
+</style>
+
+
+{% endapply %}
+<div class="divText">
+	<h6>
+		Bonjour,
+	</h6>
+	<p>Le pseudo suivant :</p>
+	<p>{{ userIdentity.pseudo }}
+	</p>
+	<p>Vous a contacté.</p>
+
+	<p>Voici son message:</p>
+	<p>{{message|raw}}</p>
+
+	<p>Vousne pouvez pas répondre à ce mail, ni contacter l'expediteur du mail.</p>
+	<p>Pour le contacter:</p>
+	<ul>
+		<li>Vous rendre dans la section "Echanges" et le contacter</li>
+	</ul>
+	<p>
+		S'il a joint son adresse mail :</p>
+	<ul>
+		<li>Lui adresser directement un mail.</li>
+	</ul>
+</p>
+
+<p>L'équipe Le handicap Visuel
+</p></div>

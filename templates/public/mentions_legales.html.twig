@@ -1,0 +1,61 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions légales
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-balance-scale" style="color:black"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5>Mentions légales
+					</h5>
+
+
+					<p>Merci de prendre connaissance :</p>
+
+
+					<p>
+						Des règles d'utilisation du forum : Post
+					</p>
+					<p>
+						Des règles d'utilisation du contenu du site
+					</p>
+
+					<p style="font-size:25px">
+						<i class="far fa-copyright"></i>laurentfontaine</p>
+
+				</div>
+
+				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register"></div>
+</aside>
+{% include "public/shared/_footer.html.twig" %}{% endblock %}

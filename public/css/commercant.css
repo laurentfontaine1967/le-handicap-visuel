@@ -1,0 +1,293 @@
+/* ---------------pour contraste adaptabilite ------------------------------------------------------------------- */
+#return_view {
+  display: none;
+}
+
+.ajout {
+  background-color: black;
+  color: white !important;
+
+  font-size: 30px;
+}
+
+/* BODY */
+/* squelette col-row  */
+
+body {
+  background-color: #fdf6f0;
+  font-family: "Lato", sans-serif;
+}
+
+#rowCommercant {
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.intro_commerce {
+  height: 95%;
+  margin-top: 15px;
+  width: 99%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  border-radius: 20px;
+  border: 3px solid grey;
+}
+
+.content_commerce {
+  height: 95%;
+  padding: 30px;
+  width: 98%;
+  margin-top: 15px;
+  border: solid 3px grey;
+  border-radius: 20px;
+}
+
+#icoco {
+  margin-top: 30px;
+  font-size: 80px;
+  color: darkblue;
+}
+/*--------------- specifique *-------------------------------------------------/
+/* col 1 */
+.intro_commerce img {
+  max-width: 70%;
+}
+
+.join {
+  align-items: center;
+  text-align: center;
+}
+
+.join p {
+  padding-top: 10px;
+  font-weight: bold;
+}
+
+.info span {
+  font-style: italic;
+}
+
+.infoCommerce h5 {
+  font-size: 30px;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* col 2 */
+/* common */
+.comm_1,
+.comm_2,
+.comm_3 {
+  margin-bottom: 30px;
+}
+
+/* avh */
+.comm_1 h6 {
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.link_1 img {
+  max-width: 100%;
+}
+
+.link_1 {
+  width: 20%;
+  text-align: center;
+}
+
+.link_1 a {
+  font-weight: bolder;
+}
+
+.link_1 i {
+  padding-right: 10px;
+}
+
+.text_1 {
+  width: 90%;
+}
+
+.comm_1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.italiq {
+  font-style: italic;
+}
+
+/*cflou  */
+.comm_2 h6 {
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.link_2 img {
+  max-width: 90%;
+}
+
+.link_2 {
+  width: 20%;
+  text-align: center;
+}
+
+.link_2 a {
+  font-weight: bolder;
+}
+
+.link_2 i {
+  padding-right: 10px;
+  font-weight: bolder;
+}
+
+.text_2 {
+  width: 90%;
+}
+
+.comm_2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*ceciaa  */
+.comm_3 h6 {
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.link_3 img {
+  max-width: 90%;
+}
+
+.link_3 {
+  width: 20%;
+  text-align: center;
+}
+
+.link_3 a {
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+.link_3 i {
+  padding-right: 10px;
+  font-weight: bolder;
+}
+
+.text_3 {
+  width: 90%;
+}
+
+.comm_3 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#italic {
+  font-style: italic;
+}
+
+/* others */
+.others h6 {
+  color: brown;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.comm_name {
+  font-weight: bold;
+  color: darkslategrey;
+}
+
+.others a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.others_1,
+.others_2,
+.others_3,
+.others_4 {
+  padding-bottom: 25px;
+}
+
+.others_1 ul,
+.others_2 ul,
+.others_3 ul,
+.others_4 ul {
+  list-style: none;
+}
+
+/* ---------------------responsive-------------------------------- */
+@media screen and (max-width: 450px) {
+  body {
+    width: 100vw;
+    margin: auto;
+  }
+
+  .comm_1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .comm_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .comm_3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .link_1 {
+    width: 70%;
+    text-align: center;
+  }
+  .link_2 {
+    width: 70%;
+    text-align: center;
+  }
+  .link_3 {
+    width: 70%;
+    text-align: center;
+  }
+
+  .link_1 img {
+    max-width: 80%;
+  }
+  .link_2 img {
+    max-width: 80%;
+  }
+
+  .link_3 img {
+    max-width: 80%;
+  }
+
+  .content_commerce {
+    height: auto;
+  }
+}
